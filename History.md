@@ -1,4 +1,10 @@
 
+1.0.2 / 2021-09-26
+==================
+
+  * fix: add toAsyncFunction method
+  * chore: add history
+
 1.0.1 / 2021-09-26
 ==================
 
