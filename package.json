@@ -1,0 +1,13 @@
+{
+  "name": "@midwayjs/mw-util",
+  "version": "1.0.0",
+  "main": "index",
+  "dependencies": {
+    "urllib": "^2.37.3"
+  },
+  "license": "MIT",
+  "scripts": {},
+  "repository": {
+    "url": "https://github.com/midwayjs/egg-mock-util"
+  }
+}
