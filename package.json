@@ -1,7 +1,8 @@
 {
   "name": "@midwayjs/mw-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index",
+  "typings": "index.d.ts",
   "dependencies": {
     "urllib": "^2.37.3"
   },
