@@ -32,6 +32,9 @@ exports.createMockApp = (app, properties = []) => {
     getBeforeStartList() {
       return readyFunction;
     },
+    toAsyncFunction(method) {
+      return method;
+    }
   };
 
   for (const property of properties) {
