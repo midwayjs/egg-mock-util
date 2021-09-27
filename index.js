@@ -8,6 +8,7 @@ exports.createMockApp = (app, properties = []) => {
     config: app.getConfig(),
     loader: {
       appInfo: {},
+      getLoadUnits: () => [],
     },
     logger: app.getLogger(),
     loggers: {
