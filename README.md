@@ -17,6 +17,9 @@ export class AutConfiguration {
     // 执行 egg 的 app.js 中的方法
     require('@ali/egg-********/app')(mockApp);
 
+    // 执行 beforeStart 方法
+    await Promise.all(mockApp.getBeforeStartList());
+
     // 可选：将 egg 赋到 app 上的对象拿到，比如赋给 midway 的 app
     this.app.changefree = mockApp.changefree;
 

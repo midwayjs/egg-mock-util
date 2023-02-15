@@ -2,20 +2,21 @@ const urllib = require('urllib');
 
 exports.createMockApp = (app, properties = []) => {
   const readyFunction = [];
+  const coreLogger = app.getLogger();
   const mockApp = {
     name: '',
-    coreLogger: app.getLogger(),
+    coreLogger,
     config: app.getConfig(),
     loader: {
       appInfo: {},
       getLoadUnits: () => [],
     },
-    logger: app.getLogger(),
+    logger: coreLogger,
     loggers: {
-      coreLogger: app.getLogger(),
+      coreLogger,
     },
     getLogger() {
-      return app.getLogger();
+      return coreLogger;
     },
     readyCallback() {
       return true;
@@ -35,6 +36,9 @@ exports.createMockApp = (app, properties = []) => {
     },
     toAsyncFunction(method) {
       return method;
+    },
+    runInBackground(asyncFn) {
+      asyncFn().catch(err => coreLogger.error(err));
     }
   };
 
